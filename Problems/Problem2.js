@@ -14,6 +14,7 @@
 console.log("Enter a string:")
 process.stdin.on("data",(input)=>{
     maskify(input)
+    maskify2(input)
     process.exit()
 })
 
@@ -36,4 +37,11 @@ function maskify(input){
         }
     }
     console.log(lastFour)
+}
+
+// Adding anothor approach
+
+function maskify2(input){
+    let inputStr = input.toString().trim()
+    console.log(inputStr.substr(0,inputStr.length - 4).replace(/./g,"#") + inputStr.substr(-4))
 }
