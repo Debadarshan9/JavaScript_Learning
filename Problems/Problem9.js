@@ -3,14 +3,14 @@
     //"Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!)."
 
 
-let isValidWalk = (arr)=>{
+let isValidWalk = (walk)=>{
     let vertical = 0
     let horizontal = 0
-    let l = arr.length
+    let l = walk.length
     if(l > 10 || l<10){
         return false
     }
-    for(let i of arr){
+    for(let i of walk){
         if(i === "e") horizontal--
         if(i === "w") horizontal++
         if(i === "n") vertical++
